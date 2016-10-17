@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Movies>
+  <Movie>
+    <Title>Casablanca</Title>
+    <Year>1942</Year>
+    <Rated>PG</Rated>
+    <Released>23 Jan 1943</Released>
+    <Runtime>102 min</Runtime>
+    <Genre>Drama, Romance, War</Genre>
+    <Director>Michael Curtiz</Director>
+    <Writers>
+      <Screenplay>Julius J. Epstein</Screenplay>
+      <Screenplay>Philip G. Epstein</Screenplay>
+      <Screenplay>Howard Koch </Screenplay>
+      <Play>Murray Burnett</Play>
+      <Play>Joan Alison</Play>
+    </Writers>
+    <Actors>
+      <Actor>Humphrey Bogart</Actor>
+      <Actor>Ingrid Bergman</Actor>
+      <Actor>Paul Henreid</Actor>
+      <Actor>Claude Rains</Actor>
+    </Actors>
+    <Plot>Set in Casablanca, Morocco during the early days of World War II: An American expatriate meets a former lover, with unforeseen complications</Plot>
+    <Language>English, French, German, Italian</Language>
+    <Country>USA</Country>
+    <Awards>Won 3 Oscars. Another 6 wins and 6 nominations.</Awards>
+    <Poster>http://ia.media-imdb.com/images/M/MV5BMjQwNDYyNTk2N15BMl5BanBnXkFtZTgwMjQ0OTMyMjE@._V1_SX300.jpg</Poster>
+    <Metascore>N/A</Metascore>
+    <imdbRating>8.6</imdbRating>
+    <imdbVotes>357,332</imdbVotes>
+    <imdbID>tt0034583</imdbID>
+    <Type>movie</Type>
+    <Response>True</Response>
+  </Movie>
+  <Movie>
+    <Title>The Big Sleep</Title>
+    <Year>1946</Year>
+    <Rated>APPROVED</Rated>
+    <Released>31 Aug 1946</Released>
+    <Runtime>114 min</Runtime>
+    <Genre>Crime, Film-Noir, Mystery</Genre>
+    <Director>Howard Hawks</Director>
+    <Writers>
+      <Screenplay>William Faulkner</Screenplay>
+      <Screenplay>Leigh Brackett</Screenplay>
+      <Screenplay>Jules Furthman</Screenplay>
+      <Novel>Raymond Chandler</Novel>
+    </Writers>
+    <Actors>
+      <Actor>Humphrey Bogart</Actor>
+      <Actor>Lauren Bacall</Actor>
+      <Actor>John Ridgely</Actor>
+      <Actor>Martha Vickers</Actor>
+    </Actors>
+    <Plot>Private detective Philip Marlowe is hired by a rich family. Before the complex case is over, he's seen murder, blackmail, and what might be love.</Plot>
+    <Language>English</Language>
+    <Country>USA</Country>
+    <Awards>1 win</Awards>
+    <Poster>http://ia.media-imdb.com/images/M/MV5BNjg5MjM5MzY5M15BMl5BanBnXkFtZTgwNjg3MzgyMjE@._V1_SX300.jpg</Poster>
+    <Metascore>N/A</Metascore>
+    <imdbRating>8.1</imdbRating>
+    <imdbVotes>60,776</imdbVotes>
+    <imdbID>tt0038355</imdbID>
+    <Type>movie</Type>
+    <Response>True</Response>
+  </Movie>
+  <Movie>
+    <Title>The African Queen</Title>
+    <Year>1951</Year>
+    <Rated>PG</Rated>
+    <Released>20 Feb 1952</Released>
+    <Runtime>105 min</Runtime>
+    <Genre>Adventure, Romance, War</Genre>
+    <Director>John Huston</Director>
+    <Writers>
+      <Novel>C.S. Forester</Novel>
+      <Adaptation>James Agee</Adaptation>
+      <Adaptation>John Huston</Adaptation>
+    </Writers>
+    <Actors>
+      <Actor>Humphrey Bogart</Actor>
+      <Actor>Katharine Hepburn</Actor>
+      <Actor>Robert Morley</Actor>
+      <Actor>Peter Bull</Actor>
+    </Actors>
+    <Plot>In Africa during WWI, a gin-swilling riverboat captain is persuaded by a strait-laced missionary to use his boat to attack an enemy warship.</Plot>
+    <Language>English, German, Swahili</Language>
+    <Country>USA, UK</Country>
+    <Awards>Won 1 Oscar. Another 5 wins and 6 nominations.</Awards>
+    <Poster>http://ia.media-imdb.com/images/M/MV5BOTg0NjY1NTEyMF5BMl5BanBnXkFtZTgwNjUwMTY3MjE@._V1_SX300.jpg</Poster>
+    <Metascore>N/A</Metascore>
+    <imdbRating>7.9</imdbRating>
+    <imdbVotes>55,484</imdbVotes>
+    <imdbID>tt0043265</imdbID>
+    <Type>movie</Type>
+    <Response>True</Response>
+  </Movie>
+</Movies>
