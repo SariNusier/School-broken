@@ -6,7 +6,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(30) NOT NULL,
   `surname` VARCHAR(30) NOT NULL,
-  `sex` CHAR(1) NOT NULL,
+  `sex` ENUM('Male', 'Female') NOT NULL,
   `dateOfBirth` DATE NULL DEFAULT NULL,
   `email` VARCHAR(30) NOT NULL,
   PRIMARY KEY (`id`));
@@ -51,7 +51,7 @@ CREATE TABLE IF NOT EXISTS `status` (
 -- Table `comment`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `comment` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `creatorId` INT NOT NULL,
   `statusId` INT NOT NULL,
   `text` VARCHAR(45) NOT NULL,
