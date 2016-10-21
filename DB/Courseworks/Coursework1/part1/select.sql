@@ -1,7 +1,7 @@
 -- Part 1.4 select.sql
 --
 -- Submitted by: Write your Name here
--- 
+--
 
 
 -- add your SELECT statements here

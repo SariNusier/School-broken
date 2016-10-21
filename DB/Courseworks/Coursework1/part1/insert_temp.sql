@@ -76,7 +76,7 @@ INSERT INTO `status` VALUES (
 -- 2 Comments per status
 
 INSERT INTO `comment` VALUES (
-  NULL,
+  1,
   2,
   1,
   'Wow, glad to hear it.',
@@ -84,122 +84,122 @@ INSERT INTO `comment` VALUES (
 
 
 INSERT INTO `comment` VALUES (
-  NULL,
   2,
+  3,
   1,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
+  3,
   2,
   2,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  4,
+  1,
   2,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  5,
+  3,
   3,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  6,
+  1,
   3,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  7,
+  3,
   4,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  8,
+  1,
   4,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  9,
+  1,
   5,
   'Wow, glad to hear it.',
   '20160523091528');
 
 
 INSERT INTO `comment` VALUES (
-  NULL,
+  10,
   2,
   5,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  11,
+  3,
   6,
   'Wow, glad to hear it.',
   '20160523091528');
 
 
 INSERT INTO `comment` VALUES (
-  NULL,
+  12,
   2,
   6,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  13,
+  1,
   7,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
+  14,
   2,
   7,
   'Wow, glad to hear it.',
   '20160523091528');
 
   INSERT INTO `comment` VALUES (
-  NULL,
+  15,
+  3,
+  8,
+  'Wow, glad to hear it.',
+  '20160523091528');
+
+INSERT INTO `comment` VALUES (
+  16,
   2,
   8,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
-  8,
-  'Wow, glad to hear it.',
-  '20160523091528');
-
-INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  17,
+  3,
   9,
   'Wow, glad to hear it.',
   '20160523091528');
 
 INSERT INTO `comment` VALUES (
-  NULL,
-  2,
+  18,
+  1,
   9,
   'Wow, glad to hear it.',
   '20160523091528');
@@ -226,11 +226,11 @@ INSERT INTO `likeStatus` VALUES (
 
 INSERT INTO `likeComment` VALUES (
   2,
-  3);
+  4);
 
 INSERT INTO `likeComment` VALUES (
   2,
-  4);
+  5);
 
 INSERT INTO `likeStatus` VALUES (
   2,
@@ -244,11 +244,11 @@ INSERT INTO `likeStatus` VALUES (
 
 INSERT INTO `likeComment` VALUES (
   3,
-  5);
+  9);
 
 INSERT INTO `likeComment` VALUES (
   3,
-  6);
+  10);
 
 INSERT INTO `likeStatus` VALUES (
   3,
@@ -261,7 +261,7 @@ INSERT INTO `likeStatus` VALUES (
 
 -- 3 business events January and February 2016
 INSERT INTO `event` VALUES (
-  NULL,
+  1,
   1,
   'Social',
   'Cool event',
@@ -270,8 +270,8 @@ INSERT INTO `event` VALUES (
   'Some nice place');
 
 INSERT INTO `event` VALUES (
-  NULL,
-  1,
+  2,
+  2,
   'Social',
   'Cool event',
   '2016-02-13',
@@ -279,8 +279,8 @@ INSERT INTO `event` VALUES (
   'Some nice place');
 
 INSERT INTO `event` VALUES (
-  NULL,
-  1,
+  3,
+  3,
   'Social',
   'Cool event',
   '2016-01-25',
@@ -289,7 +289,7 @@ INSERT INTO `event` VALUES (
 -- 3 Social events January and February 2016
 
 INSERT INTO `event` VALUES (
-  NULL,
+  4,
   1,
   'Business',
   'Cool event',
@@ -298,8 +298,8 @@ INSERT INTO `event` VALUES (
   'Some nice place');
 
 INSERT INTO `event` VALUES (
-  NULL,
-  1,
+  5,
+  2,
   'Business',
   'Cool event',
   '2016-01-16',
@@ -307,8 +307,8 @@ INSERT INTO `event` VALUES (
   'Some nice place');
 
 INSERT INTO `event` VALUES (
-  NULL,
-  1,
+  6,
+  3,
   'Business',
   'Cool event',
   '2016-02-11',

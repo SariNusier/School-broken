@@ -32,16 +32,17 @@ CREATE TABLE IF NOT EXISTS `event` (
 
 
 -- -----------------------------------------------------
+
 -- Table `status`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `status` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `creatorID` INT NOT NULL,
+  `creatorId` INT NOT NULL,
   `text` VARCHAR(45) NOT NULL,
   `timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_status_1`
-    FOREIGN KEY (`creatorID`)
+    FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION);
