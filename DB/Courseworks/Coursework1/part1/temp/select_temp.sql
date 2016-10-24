@@ -13,7 +13,7 @@ SELECT `name`, `surname`, `email` from `employee`;
 SELECT `text` FROM `status` ORDER BY `timestamp` ASC limit 1 ;
 
 -- 1.4.3 Total Usage.
-SELECT FORMAT(SUM(`total`), 0)
+SELECT FORMAT(SUM(`total`), 0) AS `totalUsage`
 FROM (
 	SELECT COUNT(*) AS `total` FROM `status`
     UNION
@@ -23,7 +23,7 @@ FROM (
 ) AS allTables;
 
 -- 1.4.4 Event Report
-SELECT `type`, FORMAT(COUNT(*), 0)
+SELECT `type`, FORMAT(COUNT(*), 0) AS `totalEvents`
 FROM `event`
 WHERE MONTH(`date`) = 2
 GROUP BY `type`;
@@ -31,7 +31,7 @@ GROUP BY `type`;
 -- 1.4.5 Comment Report
 
 SELECT
-  CONCAT(`name`, ' ', `surname`),
+  CONCAT(`name`, ' ', `surname`) AS `fullName`,
   (SELECT
           COUNT(*)
       FROM
@@ -42,26 +42,6 @@ FROM
   `employee`;
 
 -- 1.4.6 Number 1 and 2
-
-SELECT `name`, `surname`, `email`,
-(SELECT FORMAT(SUM(`COUNT(*)`), 0)
-FROM (
-	SELECT `creatorId`, COUNT(*) FROM `status`
-    GROUP BY `creatorId`
-    UNION
-    SELECT COUNT(*) FROM `comment`
-    GROUP BY `creatorId`
-) AS allTables) AS Total
-FROM `employee`;
-
-SELECT `name`, `surname`, `email`, (
-	SELECT COUNT(*) FROM `status`
-    WHERE `creatorId` = `employee` . `id`
-    UNION
-    SELECT COUNT(*) FROM `comment`
-    WHERE `creatorId` = `employee` . `id`) AS Total
-FROM `employee`;
-
 SELECT `name`, `surname`, `email`,
 ((SELECT COUNT(*) FROM `status` WHERE `creatorId` = `employee` . `id`) +
 (SELECT COUNT(*) FROM `comment` WHERE `creatorId` = `employee` . `id`)) AS Total
@@ -69,7 +49,7 @@ FROM `employee`
 ORDER BY `Total` DESC LIMIT 2;
 
 -- 1.4.7 Most Controversial Employee.
-SELECT *
+SELECT `employee`.*
 FROM
     (SELECT DISTINCT
         (`creatorId`) AS `creatorId`,

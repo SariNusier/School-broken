@@ -266,7 +266,7 @@ INSERT INTO `event` VALUES (
   'Social',
   'Cool event',
   '2016-01-12',
-  '20:11:00',
+  '13:11:00',
   'Some nice place');
 
 INSERT INTO `event` VALUES (
@@ -275,7 +275,7 @@ INSERT INTO `event` VALUES (
   'Social',
   'Cool event',
   '2016-02-13',
-  '20:11:00',
+  '12:11:00',
   'Some nice place');
 
 INSERT INTO `event` VALUES (
@@ -284,7 +284,7 @@ INSERT INTO `event` VALUES (
   'Social',
   'Cool event',
   '2016-01-25',
-  '20:11:00',
+  '11:11:00',
   'Some nice place');
 -- 3 Social events January and February 2016
 
@@ -294,7 +294,7 @@ INSERT INTO `event` VALUES (
   'Business',
   'Cool event',
   '2016-02-03',
-  '20:11:00',
+  '09:11:00',
   'Some nice place');
 
 INSERT INTO `event` VALUES (
@@ -303,7 +303,7 @@ INSERT INTO `event` VALUES (
   'Business',
   'Cool event',
   '2016-01-16',
-  '20:11:00',
+  '15:11:00',
   'Some nice place');
 
 INSERT INTO `event` VALUES (
@@ -312,5 +312,5 @@ INSERT INTO `event` VALUES (
   'Business',
   'Cool event',
   '2016-02-11',
-  '20:11:00',
+  '11:11:00',
   'Some nice place');
