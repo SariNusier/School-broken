@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `sex` ENUM('Male', 'Female') NOT NULL,
   `dateOfBirth` DATE NULL DEFAULT NULL,
   `email` VARCHAR(30) NOT NULL,
+  UNIQUE (`email`),
   PRIMARY KEY (`id`));
 
 
@@ -27,8 +28,9 @@ CREATE TABLE IF NOT EXISTS `event` (
   CONSTRAINT `fk_event_1`
     FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
 
 
 -- -----------------------------------------------------
@@ -44,8 +46,9 @@ CREATE TABLE IF NOT EXISTS `status` (
   CONSTRAINT `fk_status_1`
     FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
 
 
 -- -----------------------------------------------------
@@ -61,13 +64,14 @@ CREATE TABLE IF NOT EXISTS `comment` (
   CONSTRAINT `fk_comment_1`
     FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_comment_2`
     FOREIGN KEY (`statusId`)
     REFERENCES `status` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
 
 
 -- -----------------------------------------------------
@@ -80,13 +84,14 @@ CREATE TABLE IF NOT EXISTS `likeStatus` (
   CONSTRAINT `fk_likeStatus_1`
     FOREIGN KEY (`statusId`)
     REFERENCES `status` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_likeStatus_2`
     FOREIGN KEY (`employeeId`)
     REFERENCES `employee` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
 
 
 -- -----------------------------------------------------
@@ -99,10 +104,11 @@ CREATE TABLE IF NOT EXISTS `likeComment` (
   CONSTRAINT `fk_likeComment_1`
     FOREIGN KEY (`commentId`)
     REFERENCES `comment` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `fk_likeComment_2`
     FOREIGN KEY (`employeeId`)
     REFERENCES `employee` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION);
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
