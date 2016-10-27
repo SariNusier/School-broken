@@ -1,3 +1,7 @@
+-- Part 1.1 schema.sql
+--
+-- Submitted by: Sari Nusier
+--
 
 -- -----------------------------------------------------
 -- Table `employee`

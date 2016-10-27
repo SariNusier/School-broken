@@ -1,6 +1,6 @@
 -- Part 1.6 delete.sql
 --
--- Submitted by: Write your Name here
+-- Submitted by: Sari Nusier
 --
 --
 

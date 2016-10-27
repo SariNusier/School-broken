@@ -1,10 +1,7 @@
 -- Part 1.2 insert.sql
 --
--- Submitted by: Write your Name here
+-- Submitted by: Sari Nusier
 --
-
-
--- add your INSERT statements here
 
 
 -- 3 Celebrities as employees
