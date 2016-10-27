@@ -20,10 +20,10 @@ CREATE TABLE IF NOT EXISTS `event` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `creatorId` INT NOT NULL,
   `type` ENUM('Social', 'Business') NOT NULL,
-  `description` VARCHAR(100) NOT NULL,
+  `description` VARCHAR(200) NOT NULL,
   `date` DATE NOT NULL,
   `time` TIME NOT NULL,
-  `location` VARCHAR(45) NULL,
+  `location` VARCHAR(100) NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_event_1`
     FOREIGN KEY (`creatorId`)
@@ -40,7 +40,7 @@ CREATE TABLE IF NOT EXISTS `event` (
 CREATE TABLE IF NOT EXISTS `status` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `creatorId` INT NOT NULL,
-  `text` VARCHAR(45) NOT NULL,
+  `text` VARCHAR(200) NOT NULL,
   `timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_status_1`
@@ -58,7 +58,7 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `creatorId` INT NOT NULL,
   `statusId` INT NOT NULL,
-  `text` VARCHAR(45) NOT NULL,
+  `text` VARCHAR(200) NOT NULL,
   `timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
   CONSTRAINT `fk_comment_1`
