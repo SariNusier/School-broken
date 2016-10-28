@@ -7,66 +7,76 @@
 -- 3 Celebrities as employees
 INSERT INTO `employee` VALUES(1, 'Liam', 'Neeson', 'Male', '1952-06-07', 'liam@neeson.com');
 INSERT INTO `employee` VALUES(2, 'Denzel', 'Washington', 'Male', '1954-12-28', 'denzel@washington.com');
-INSERT INTO `employee` VALUES(3, 'Ellen', 'DeGeneres', 'Female', '1958-01-26', 'ellen@show.com');
+INSERT INTO `employee` VALUES(3, 'Justin', 'Bieber', 'Female', '1994-03-1', 'justin@bieber.com');
+INSERT INTO `employee` VALUES(4, 'Sari', 'Nusier', 'Male', '1994-12-08', 'sari.nusier@kcl.ac.uk');
 
 -- 3 Statuses per employee
 INSERT INTO `status` VALUES (
   1,
   1,
-  'Hello everyone. Great day today!',
-  '20160523091528');
+  'Hello everyone, first status EVER!',
+  '20160101090012'
+);
 
 INSERT INTO `status` VALUES (
   2,
   1,
-  'Hello everyone. Great day today!',
-  '20160524090204');
+  'Today was an AMAZING day!',
+  '20160101190204'
+);
 
 INSERT INTO `status` VALUES (
   3,
   1,
-  'Hello everyone. Great day today!',
-  '20160525091615');
+  'Good morning, everyone!',
+  '20160102091615'
+);
 
 --
 
 INSERT INTO `status` VALUES (
   4,
   2,
-  'Hello everyone. Great day today!',
-  '20160310071615');
+  'Thought of trying out this new social network, it looks interesting.',
+  '20160102113015'
+);
 
 INSERT INTO `status` VALUES (
   5,
   2,
-  'Hello everyone. Great day today!',
-  '20160310071615');
+  'Today we are starting to film my new movie. Stay tuned!',
+  '20160110071615'
+);
 
 INSERT INTO `status` VALUES (
   6,
   2,
-  'Hello everyone. Great day today!',
-  '20160310071615');
+  'Filming is going great so far!',
+  '20160120092312'
+);
 
 --
 
 INSERT INTO `status` VALUES (
   7,
   3,
-  'Hello everyone. Great day today!',
-  '20160310071615');
+  'This social network is useless',
+  '20160112101336'
+);
 
 INSERT INTO `status` VALUES (
   8,
   3,
-  'Hello everyone. Great day today!',
-  '20160310071615');
+  'Going to record another song. I am cool!',
+  '20160102100313'
+);
 
 INSERT INTO `status` VALUES (
   9,
   3,
-  'Hello everyone. Great day today!',
-  '20160310071615');
+  'My new song is almost done!',
+  '20160103101009'
+);
 
 
 
@@ -76,184 +86,262 @@ INSERT INTO `comment` VALUES (
   1,
   2,
   1,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Is this the first comment then?',
+  '20160101090503'
+);
 
 
 INSERT INTO `comment` VALUES (
   2,
   3,
   1,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Why is this a big deal?',
+  '20160101090715'
+);
 
 INSERT INTO `comment` VALUES (
   3,
   2,
   2,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Wow, glad to hear it!',
+  '20160101190703'
+);
 
 INSERT INTO `comment` VALUES (
   4,
-  1,
+  3,
   2,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Meh, mine was better.',
+  '20160101190907'
+);
 
 INSERT INTO `comment` VALUES (
   5,
+  2,
   3,
-  3,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Morning!',
+  '20160102091712'
+);
 
 INSERT INTO `comment` VALUES (
   6,
-  1,
   3,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  3,
+  'good morning',
+  '20160102091903'
+);
 
 INSERT INTO `comment` VALUES (
   7,
-  3,
+  1,
   4,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Glad you started posting!',
+  '20160102113604'
+);
 
 INSERT INTO `comment` VALUES (
   8,
-  1,
+  3,
   4,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Another one joining..',
+  '20160102114108'
+);
 
 INSERT INTO `comment` VALUES (
   9,
   1,
   5,
-  'Wow, glad to hear it.',
-  '20160523091528');
-
+  'Can\'t wait to hear more about it!',
+  '20160110091206'
+);
 
 INSERT INTO `comment` VALUES (
   10,
-  2,
+  3,
   5,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Sounds like fun.',
+  '20160110101348'
+);
 
 INSERT INTO `comment` VALUES (
   11,
-  3,
+  1,
   6,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Great to hear that!',
+  '20160120092712'
+);
 
 
 INSERT INTO `comment` VALUES (
   12,
-  2,
+  3,
   6,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'congrats!',
+  '20160120093112'
+);
 
 INSERT INTO `comment` VALUES (
   13,
   1,
   7,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'What\'s your problem?',
+  '20160112101636'
+);
 
 INSERT INTO `comment` VALUES (
   14,
   2,
   7,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'This guy is crazy...',
+  '20160112101736'
+);
 
-  INSERT INTO `comment` VALUES (
+INSERT INTO `comment` VALUES (
   15,
   3,
-  8,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  7,
+  'I\'m not. you are all idiots',
+  '20160112101836'
+);
 
 INSERT INTO `comment` VALUES (
   16,
-  2,
-  8,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  1,
+  7,
+  'I will find you.',
+  '20160112101936'
+);
 
 INSERT INTO `comment` VALUES (
   17,
-  3,
-  9,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  2,
+  7,
+  'Hahaha',
+  '20160112101836'
+);
 
 INSERT INTO `comment` VALUES (
   18,
   1,
+  7,
+  'You can join me Denzel :D',
+  '20160112102136'
+);
+
+INSERT INTO `comment` VALUES (
+  19,
+  2,
+  7,
+  'Sure',
+  '20160112102236'
+);
+
+
+INSERT INTO `comment` VALUES (
+  20,
+  1,
+  7,
+  'This status is so messed up it has a comment in the PAST',
+  '20140101000000'
+);
+
+INSERT INTO `comment` VALUES (
+  21,
+  1,
+  8,
+  'Yes, soo cool...',
+  '20160102100512'
+);
+
+INSERT INTO `comment` VALUES (
+  22,
+  2,
+  8,
+  'Good luck!',
+  '20160102100753'
+);
+
+INSERT INTO `comment` VALUES (
+  23,
+  1,
   9,
-  'Wow, glad to hear it.',
-  '20160523091528');
+  'Good job!',
+  '20160103101203'
+);
+
+INSERT INTO `comment` VALUES (
+  24,
+  2,
+  9,
+  'I hope it goes well :).',
+  '20160103101307'
+);
 
 
 -- 4 Likes per employee
 INSERT INTO `likeComment` VALUES (
   1,
-  1);
+  1
+);
 
 INSERT INTO `likeComment` VALUES (
   1,
-  2);
+  2
+);
 
 INSERT INTO `likeStatus` VALUES (
   1,
-  4);
+  4
+);
 
 INSERT INTO `likeStatus` VALUES (
   1,
-  5);
+  5
+);
 
 --
 
 INSERT INTO `likeComment` VALUES (
   2,
-  4);
+  4
+);
 
 INSERT INTO `likeComment` VALUES (
   2,
-  5);
+  5
+);
 
 INSERT INTO `likeStatus` VALUES (
   2,
-  1);
+  1
+);
 
 INSERT INTO `likeStatus` VALUES (
   2,
-  2);
+  2
+);
 
 --
 
 INSERT INTO `likeComment` VALUES (
   3,
-  9);
+  9
+);
 
 INSERT INTO `likeComment` VALUES (
   3,
-  10);
+  10
+);
 
 INSERT INTO `likeStatus` VALUES (
   3,
-  3);
+  3
+);
 
 INSERT INTO `likeStatus` VALUES (
   3,
-  6);
+  6
+);
 
 
 -- 3 business events January and February 2016
@@ -264,50 +352,56 @@ INSERT INTO `event` VALUES (
   'Cool event',
   '2016-01-12',
   '13:11:00',
-  'Some nice place');
+  'Some nice place'
+);
 
 INSERT INTO `event` VALUES (
   2,
   2,
   'Social',
-  'Cool event',
+  'Cooler event',
   '2016-02-13',
-  '12:11:00',
-  'Some nice place');
+  '18:11:00',
+  'Some nice place'
+);
 
 INSERT INTO `event` VALUES (
   3,
   3,
   'Social',
-  'Cool event',
+  'Very cool event',
   '2016-01-25',
   '11:11:00',
-  'Some nice place');
+  'Some nice place'
+);
 -- 3 Social events January and February 2016
 
 INSERT INTO `event` VALUES (
   4,
   1,
   'Business',
-  'Cool event',
+  'Business stuff',
   '2016-02-03',
-  '09:11:00',
-  'Some nice place');
+  '19:11:00',
+  'Some nice place'
+);
 
 INSERT INTO `event` VALUES (
   5,
   2,
   'Business',
-  'Cool event',
+  'Meeting',
   '2016-01-16',
-  '15:11:00',
-  'Some nice place');
+  '09:11:00',
+  'Some nice place'
+);
 
 INSERT INTO `event` VALUES (
   6,
   3,
   'Business',
-  'Cool event',
+  'More meetings',
   '2016-02-11',
   '11:11:00',
-  'Some nice place');
+  'Some nice place'
+);
