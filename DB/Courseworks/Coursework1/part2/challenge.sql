@@ -18,26 +18,42 @@ ADD COLUMN `attachment` LONGBLOB NULL;
 -- If an employee invites themselves, the confirmed field MUST be 1, thus allowing
 -- for any employee to confirm attendence to an event.
 CREATE TABLE `invitation` (
-    `invitorId` INT NOT NULL,
-    `inviteeId` INT NOT NULL,
-    `eventId` INT NOT NULL,
-    `confirmed` BIT NULL,
-    PRIMARY KEY (`invitorId`, `inviteeId`, `eventId`),
-    CONSTRAINT `fk_invitor`
-      FOREIGN KEY (`invitorId`)
-      REFERENCES `k1333307db`.`employee` (`id`)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE,
-    CONSTRAINT `fk_invitee`
-      FOREIGN KEY (`inviteeId`)
-      REFERENCES `k1333307db`.`employee` (`id`)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE,
-    CONSTRAINT `fk_event`
-      FOREIGN KEY (`eventId`)
-      REFERENCES `k1333307db`.`event` (`id`)
-      ON DELETE CASCADE
-      ON UPDATE CASCADE
+  `invitorId` INT NOT NULL,
+  `inviteeId` INT NOT NULL,
+  `eventId` INT NOT NULL,
+  `confirmed` BIT NULL,
+  PRIMARY KEY (`invitorId`, `inviteeId`, `eventId`),
+  CONSTRAINT `fk_invitation_invitor`
+    FOREIGN KEY (`invitorId`)
+    REFERENCES `k1333307db`.`employee` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_invitation_invitee`
+    FOREIGN KEY (`inviteeId`)
+    REFERENCES `k1333307db`.`employee` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_invitation_event`
+    FOREIGN KEY (`eventId`)
+    REFERENCES `k1333307db`.`event` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
+);
+
+CREATE TABLE `attendance` (
+  `attendeeId` INT NOT NULL,
+  `eventId` INT NOT NULL,
+  PRIMARY KEY (`attendeeId`, `eventId`),
+  CONSTRAINT `fk_attendance_attendee`
+    FOREIGN KEY(`invitorId`)
+    REFERENCES `employee` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
+  CONSTRAINT `fk_attendance_event`
+    FOREIGN KEY(`eventId`)
+    REFERENCES `event` (`id`)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE
 );
 
 -- The trigger makes sure that only event creators can invite others OR
