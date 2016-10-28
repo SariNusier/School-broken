@@ -14,8 +14,8 @@ CREATE TABLE IF NOT EXISTS `employee` (
   `dateOfBirth` DATE NULL DEFAULT NULL,
   `email` VARCHAR(30) NOT NULL,
   UNIQUE (`email`),
-  PRIMARY KEY (`id`));
-
+  PRIMARY KEY (`id`)
+);
 
 -- -----------------------------------------------------
 -- Table `event`
@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `event` (
   `time` TIME NOT NULL,
   `location` VARCHAR(100) NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_event_1`
+  CONSTRAINT `fk_event_creator`
     FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
     ON DELETE CASCADE
@@ -47,7 +47,7 @@ CREATE TABLE IF NOT EXISTS `status` (
   `text` VARCHAR(200) NOT NULL,
   `timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_status_1`
+  CONSTRAINT `fk_status_creator`
     FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
     ON DELETE CASCADE
@@ -65,12 +65,12 @@ CREATE TABLE IF NOT EXISTS `comment` (
   `text` VARCHAR(200) NOT NULL,
   `timestamp` TIMESTAMP NOT NULL,
   PRIMARY KEY (`id`),
-  CONSTRAINT `fk_comment_1`
+  CONSTRAINT `fk_comment_creator`
     FOREIGN KEY (`creatorId`)
     REFERENCES `employee` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_comment_2`
+  CONSTRAINT `fk_comment_status`
     FOREIGN KEY (`statusId`)
     REFERENCES `status` (`id`)
     ON DELETE CASCADE
@@ -85,12 +85,12 @@ CREATE TABLE IF NOT EXISTS `likeStatus` (
   `employeeId` INT NOT NULL,
   `statusId` INT NOT NULL,
   PRIMARY KEY (`employeeId`, `statusId`),
-  CONSTRAINT `fk_likeStatus_1`
+  CONSTRAINT `fk_likeStatus_status`
     FOREIGN KEY (`statusId`)
     REFERENCES `status` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_likeStatus_2`
+  CONSTRAINT `fk_likeStatus_employee`
     FOREIGN KEY (`employeeId`)
     REFERENCES `employee` (`id`)
     ON DELETE CASCADE
@@ -105,12 +105,12 @@ CREATE TABLE IF NOT EXISTS `likeComment` (
   `employeeId` INT NOT NULL,
   `commentId` INT NOT NULL,
   PRIMARY KEY (`employeeId`, `commentId`),
-  CONSTRAINT `fk_likeComment_1`
+  CONSTRAINT `fk_likeComment_comment`
     FOREIGN KEY (`commentId`)
     REFERENCES `comment` (`id`)
     ON DELETE CASCADE
     ON UPDATE CASCADE,
-  CONSTRAINT `fk_likeComment_2`
+  CONSTRAINT `fk_likeComment_employee`
     FOREIGN KEY (`employeeId`)
     REFERENCES `employee` (`id`)
     ON DELETE CASCADE
