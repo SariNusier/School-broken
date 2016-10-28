@@ -405,3 +405,13 @@ INSERT INTO `event` VALUES (
   '11:11:00',
   'Some nice place'
 );
+
+INSERT INTO `event` VALUES (
+  7,
+  4,
+  'Business',
+  'Meeting in the future',
+  '2020-02-11',
+  '11:11:00',
+  'London'
+);
