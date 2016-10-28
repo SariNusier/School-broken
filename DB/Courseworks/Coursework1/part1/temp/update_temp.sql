@@ -13,11 +13,13 @@ SET SQL_SAFE_UPDATES=1;
 
 -- 1.5.2 Update Comments
 SET SQL_SAFE_UPDATES=0;
-UPDATE `comment` SET `timestamp` = (SELECT `status` . `timestamp` + 1 second FROM status WHERE `id` = `comment` . `statusId`);
+UPDATE `comment` SET `timestamp` = (SELECT `status` . `timestamp` + 1 second FROM status WHERE `id` = `comment` . `statusId`)
+WHERE `comment`.`timestamp` < (SELECT `status`.`timestamp` FROM status WHERE `id` = `comment` . `statusId`);
 SET SQL_SAFE_UPDATES=1;
 
 -- THE BELOW COMMENTED TRIGGERS ARE USED TO ENSURE THAT THE ABOVE RULES WILL BE ENFORCED
 -- FOR DATA INSERTED IN THE FUTURE
+-- PLEASE UNCOMMENT TO USE!
 
 -- delimiter $$
 --   create trigger `trigger_before_insert_event` before insert on `event`
