@@ -23,9 +23,10 @@ FROM (
 ) AS allTables;
 
 -- 1.4.4 Event Report
+-- ASSUMING THAT WE WANT THE MONTH OF FEBRUARY OF THE CURRENT YEAR!
 SELECT `type`, FORMAT(COUNT(*), 0) AS `totalEvents`
 FROM `event`
-WHERE MONTH(`date`) = 2
+WHERE MONTH(`date`) = 2 AND YEAR(`date`) = YEAR(CURDATE())
 GROUP BY `type`;
 
 -- 1.4.5 Comment Report
