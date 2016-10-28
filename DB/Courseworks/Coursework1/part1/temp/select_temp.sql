@@ -7,19 +7,19 @@
 -- add your SELECT statements here
 
 -- 1.4.1 Employee List.
-SELECT `name`, `surname`, `email` from `employee`;
+SELECT `name`, `surname`, `email` FROM `employee`;
 
 -- 1.4.2 Oldest Status.
-SELECT `text` FROM `status` ORDER BY `timestamp` ASC limit 1 ;
+SELECT `text` FROM `status` ORDER BY `timestamp` ASC limit 1;
 
 -- 1.4.3 Total Usage.
 SELECT FORMAT(SUM(`total`), 0) AS `totalUsage`
 FROM (
 	SELECT COUNT(*) AS `total` FROM `status`
-    UNION
-    SELECT COUNT(*) AS `total` FROM `comment`
-    UNION
-    SELECT COUNT(*) AS `total` FROM `event`
+  UNION
+  SELECT COUNT(*) AS `total` FROM `comment`
+  UNION
+  SELECT COUNT(*) AS `total` FROM `event`
 ) AS allTables;
 
 -- 1.4.4 Event Report
@@ -50,23 +50,21 @@ ORDER BY `Total` DESC LIMIT 2;
 
 -- 1.4.7 Most Controversial Employee.
 SELECT `employee`.*
-FROM
-    (SELECT DISTINCT
+FROM (
+	SELECT DISTINCT
         (`creatorId`) AS `creatorId`,
-            (SELECT
-                    COUNT(*)
-                FROM
-                    `comment`
-                WHERE
-                    `comment`.`statusId` = `status`.`id`) AS `count`
-    FROM
-        `status`
-    HAVING `count` = (SELECT
-            COUNT(*)
+        (SELECT COUNT(*)
+         FROM `comment`
+         WHERE `comment`.`statusId` = `status`.`id`
+				) AS `count`
+   FROM `status`
+   HAVING `count` =
+	 		(SELECT COUNT(*)
         FROM
             `comment`
         GROUP BY `statusId`
         ORDER BY `COUNT(*)` DESC
-        LIMIT 1)) AS allTable
-        JOIN
-    `employee` ON `employee`.`id` = `creatorId`
+        LIMIT 1
+			)
+) AS allTable
+JOIN `employee` ON `employee`.`id` = `creatorId`
