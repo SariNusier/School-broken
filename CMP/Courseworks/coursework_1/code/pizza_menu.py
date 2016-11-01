@@ -2,8 +2,12 @@
 Sari Nusier
 1317015
 
-The script takes as input the pizza.xml file which describes the pizza menu of a
-specific restaurant. It then outputs the menu (to stdout) in the following format:
+Description: Solution to Coursework 1 Part 1
+
+Input: data/pizza.xml file which describes the pizza menu of a specific
+restaurant.
+
+Output: the menu (to stdout) in the following format:
 
 # (RestaurantName)
 
