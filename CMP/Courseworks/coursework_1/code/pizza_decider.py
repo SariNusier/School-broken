@@ -19,16 +19,16 @@ import csv
 import json
 
 class PizzaRequest():
-"""This object describes a pizza request containing the username of the requestor,
-the text of the request and a boolean to tell if the request was accepted or not
-"""
+    """This object describes a pizza request containing the username of the
+    requestor, the text of the request and a boolean to tell if the request was
+    accepted or not"""
     def __init__(self,username,text,received_pizza=None):
         self.username = username
         self.text = text
         self.received_pizza = received_pizza
 
 class PizzaRequestHistory():
-"""Object that helps define a history of requests (using a list)"""
+    """Object that helps define a history of requests (using a list)"""
     def __init__(self,requests):
         self.requests = requests
 
@@ -38,14 +38,14 @@ class PizzaRequestHistory():
                 if username == request.username]
 
 class PizzaDecider():
-"""This class is used to decide whether a user's request should be accepted or
-not, based on the rules defined in the coursework."""
+    """This class is used to decide whether a user's request should be accepted
+    or not, based on the rules defined in the coursework."""
     def __init__(self,history):
         self.history = history
 
     def decide(self,request):
-    """Method returns a boolean decision on whether the request is acceptable or
-    not"""
+        """Method returns a boolean decision on whether the request is
+        acceptable or not"""
         #length rule: only texts over 400 characters should be accepted
         if(len(request.text) <= 400):
             return False
