@@ -18,8 +18,8 @@ import csv
 
 
 def formatStringToPrint(name, size, toppings, crust):
-"""helper function that builds the string to be written into pizza_specials.txt
-"""
+    """helper function that builds the string to be written into
+    pizza_specials.txt"""
     # string that will contain all the toppings separated by an and
     allToppings = ""
 
@@ -33,9 +33,8 @@ def formatStringToPrint(name, size, toppings, crust):
 
 # this is a helper function that translates the toppings code into the corresponding names
 def getToppings(toppingCodes, toppingString):
-"""this is a helper function that translates the toppings code into the
-corresponding names
-"""
+    """this is a helper function that translates the toppings code into the
+    corresponding names"""
     return [toppingCodes[toppingString[c]] for c in range(0, len(toppingString))]
 
 
