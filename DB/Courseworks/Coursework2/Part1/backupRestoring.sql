@@ -11,4 +11,5 @@
 
 -- Restoring database:
 -- mysql -u k1333307 -p -h nmsdvm999956.nms.kcl.ac.uk k1333307db < crimes2015.sql
+-- 59UQUKg!
 SOURCE crimes2015.sql;
