@@ -16,6 +16,8 @@ SET time_occ = time_format(time_occ, '%i:%s:00');
 
 -- We set the type of time_occ column to TIME, in order to keep a uniform type
 -- across all tables.
+-- This is not needed as the conversion will happen when the merging of the tables
+-- will be done in the next part.
 ALTER TABLE crimes2015
 MODIFY time_occ TIME;
 
