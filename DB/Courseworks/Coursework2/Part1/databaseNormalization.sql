@@ -30,6 +30,12 @@ CREATE TABLE IF NOT EXISTS `crimeType` AS
 		`crime_desc`
 	FROM `crimes`;
 
+DELETE FROM `crimeType` WHERE `crime_desc` = 'THEFT PLAIN - PETTY (UNDER $400)';
+DELETE FROM `crimeType` WHERE `crime_no` = 813;
+INSERT INTO `crimeType` VALUES(813, 'CHILD ENDANGERMENT/NEG. OR CHILD ANNOYING (17YRS & UNDER, DID NOT TOUCH VICTIM)');
+DELETE FROM `crimeType` WHERE `crime_no` = 930;
+INSERT INTO `crimeType` VALUES(930, 'CRIMINAL THREATS - NO WEAPON DISPLAYED OR THREATS, VERBAL/TERRORIST');
+
 ALTER TABLE `crimeType` ADD PRIMARY KEY(`crime_no`);
 
 
@@ -37,7 +43,7 @@ ALTER TABLE `crimeType` ADD PRIMARY KEY(`crime_no`);
 -- which can be found in the table created above.
 CREATE TABLE IF NOT EXISTS `location` AS
 	SELECT DISTINCT `rd` AS 'rd_id',
-		`area_code`
+		`area` AS `area_code`
 	FROM `crimes`;
 
 -- Primary and foreign key
@@ -54,7 +60,12 @@ CREATE TABLE IF NOT EXISTS `crime` AS
     `crime_no` AS `crime_type`,
     `status` AS `crime_status`,
     `image_no`
-
 	FROM `crimes`;
 
-ALTER TABLE `crimeType` ADD PRIMARY KEY(`crime_no`), CONSTRAINT `road_area` ;
+ALTER TABLE `crime`
+	ADD PRIMARY KEY(`dr_no`),
+	ADD CONSTRAINT `location_fk` FOREIGN KEY(`location_id`) REFERENCES `location` (`rd_id`),
+	ADD CONSTRAINT `type_fk` FOREIGN KEY(`crime_type`) REFERENCES `crimeType` (`crime_no`),
+	ADD CONSTRAINT `status_fk` FOREIGN KEY(`crime_status`) REFERENCES `crimeStatus` (`status_code`),
+	ADD CONSTRAINT `image_fk` FOREIGN KEY(`image_no`) REFERENCES `image` (`image_no`)
+;
