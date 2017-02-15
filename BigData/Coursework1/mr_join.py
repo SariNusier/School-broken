@@ -1,6 +1,4 @@
 import os
-
-import sys
 from mrjob.job import MRJob, MRStep
 
 
@@ -33,8 +31,10 @@ class MRWordFrequencyCount(MRJob):
         file1_name, file1_values = file1
         file2_name, file2_values = file2
 
-        # We return the values in order of the files inputted
-        if file1_name == sys.argv[1]:
+        # We return the values by writing age and occupation first
+        # followed by education and marital status to keep
+        # an even order regardless of the order of files inputted
+        if file1_name == "id_age_occ.csv":
             yield(key, (file1_values, file2_values))
         else:
             yield(key, (file2_values, file1_values))
