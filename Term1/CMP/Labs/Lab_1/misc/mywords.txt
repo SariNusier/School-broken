@@ -1,5 +1,0 @@
-abiotic,bugs,False,0
-abiotic,bio,True,1
-abiotic,boat,True,1
-abiotic,arctic,False,0
-abiotic,biotic,True,3
